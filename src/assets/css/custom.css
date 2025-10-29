@@ -1,0 +1,115 @@
+.modal-header,
+.modal-footer {
+	border: 0;
+}
+.modal-header .close {
+	padding: 6px 10px;
+	margin: 0;
+	position: absolute;
+	right: -10px;
+	top: -18px;
+	background: red;
+	opacity: 1;
+	border-radius: 50px;
+	color: #fff;
+}
+.modal-title {
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+	font-weight: 700;
+}
+.modalSm {
+	width: 20%;
+}
+.noPaddBtm {
+	padding-bottom: 0;
+}
+.noPaddTop {
+	padding-top: 0;
+}
+.editBtn {
+	float: right;
+	background: #07b5b6;
+	border: #07b5b6 solid 2px;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 5px 16px;
+	border-radius: 10px;
+	margin-top: 8px;
+	transition-duration: 0.3s;
+}
+.editBtn:hover {
+	color: #07b5b6;
+	text-decoration: none;
+	background: none;
+	transition-duration: 0.3s;
+}
+.contentCenter {
+	justify-content: center;
+}
+.form-control {
+	background: #f9f9f9;
+	font-size: 14px;
+	color: #c5c5c5;
+	border: #f9f9f9 solid 1px;
+}
+.modalLg {
+	max-width: 800px;
+}
+.modal-title input,
+.modal-title select {
+	width: 20%;
+	float: right;
+}
+.btnUpload {
+	background: #07b5b6;
+	border: #07b5b6 solid 2px;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 5px 16px;
+	border-radius: 10px;
+	margin-top: 8px;
+	transition-duration: 0.3s;
+}
+.btnUpload:hover {
+	color: #07b5b6;
+	text-decoration: none;
+	background: none;
+	transition-duration: 0.3s;
+}
+textarea {
+	resize: none;
+}
+.addBtnArea {
+	position: relative;
+}
+.btnAdd {
+	position: relative;
+	background: none;
+	bottom: -60px;
+	right: 40px;
+	border: none;
+}
+
+.btnAdd:focus {
+	outline: 0;
+	box-shadow: none;
+}
+.addBtnArea img {
+	margin-left: 60px;
+}
+.btnAdd img {
+	margin: 0;
+}
+.btn-dark {
+	background: #1b1d32;
+	color: white;
+	font-size: 18px;
+	border: #1b1d32 solid 1px;
+	transition-duration: 0.3s;
+}
+
+.speed-level-note {
+	margin: 6px 0 0 0;
+}
