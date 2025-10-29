@@ -20,7 +20,7 @@ class SpeedLevel extends Component {
 			<Grid fluid>
 				<Row>
 					<Col md={12} style={{ margin: "10px 0 10px 0" }}>
-						<Button className='btn-primary pull-right m-2' onClick={this.handleToggleSpeedLevelModal}>
+						<Button className='btn-dark pull-right m-2' onClick={this.handleToggleSpeedLevelModal}>
 							Add Speed Level
 						</Button>
 					</Col>

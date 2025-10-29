@@ -17,7 +17,14 @@ class DrillModal extends Component {
 						<div className='col-md-6 col-sm-6 col-xs-12 text-center'>
 							<div className='form-group'>
 								<img src={uploadIcon} alt='' width='100%' />
-								<a href='#' className='btn btnUpload'>
+								<input
+									type='file'
+									className='form-control'
+									style={{ display: "none" }}
+									ref={(fileInput) => (this.fileInput = fileInput)}
+									// onChange={this.handleSelectFile}
+								/>
+								<a href='#' className='btn btnUpload' onClick={() => this.fileInput.click()}>
 									Upload Thumbnail
 								</a>
 							</div>
@@ -25,7 +32,14 @@ class DrillModal extends Component {
 						<div className='col-md-6 col-sm-6 col-xs-12 text-center'>
 							<div className='form-group'>
 								<img src={videoIcon} alt='' width='100%' />
-								<a href='#' className='btn btnUpload'>
+								<input
+									type='file'
+									className='form-control'
+									style={{ display: "none" }}
+									ref={(videoInput) => (this.videoInput = videoInput)}
+									// onChange={this.handleSelectFile}
+								/>
+								<a href='#' className='btn btnUpload' onClick={() => this.videoInput.click()}>
 									Upload Video
 								</a>
 							</div>

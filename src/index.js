@@ -11,10 +11,12 @@ import "./assets/css/pe-icon-7-stroke.css";
 import "./assets/css/custom.css";
 
 import AdminLayout from "layouts/Admin.jsx";
+import LoginLayout from "layouts/Login";
 
 ReactDOM.render(
 	<BrowserRouter>
 		<Switch>
+			<Route path='/login' component={LoginLayout}></Route>
 			<Route path='/admin' render={(props) => <AdminLayout {...props} />} />
 			<Redirect from='/' to='/admin/dashboard' />
 		</Switch>

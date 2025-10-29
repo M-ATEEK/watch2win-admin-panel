@@ -17,7 +17,14 @@ class CategoryModal extends Component {
 					<div className='form-group'>
 						<div className='addBtnArea text-center'>
 							<img src={CategoryIcon} alt='' />
-							<button type='button' className='btn btnAdd'>
+							<input
+								type='file'
+								className='form-control'
+								style={{ display: "none" }}
+								ref={(fileInput) => (this.fileInput = fileInput)}
+								// onChange={this.handleSelectFile}
+							/>
+							<button type='button' className='btn btnAdd' onClick={() => this.fileInput.click()}>
 								<img src={AddIcon} alt='' />
 							</button>
 						</div>

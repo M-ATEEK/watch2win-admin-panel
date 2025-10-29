@@ -21,7 +21,7 @@ class Category extends Component {
 			<Grid fluid>
 				<Row>
 					<Col md={12} style={{ margin: "10px 0 10px 0" }}>
-						<Button className='btn-primary pull-right m-2' onClick={this.handleToggleCategoryModal}>
+						<Button className='btn-dark pull-right m-2' onClick={this.handleToggleCategoryModal}>
 							Add Category
 						</Button>
 					</Col>
