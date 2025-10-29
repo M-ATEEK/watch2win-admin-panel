@@ -3,19 +3,37 @@ import { Grid, Row, Col, Table, Button, Image, Dropdown } from "react-bootstrap"
 import Card from "components/Card/Card.jsx";
 import CategoryModal from "components/Modals/Category/Index";
 import avatar from "../../assets/img/default-avatar.png";
+import config from "../../config"
+import axios from "axios";
 
 class Category extends Component {
 	state = {
 		isAddModalOpen: false,
+		data: []
 	};
 
 	handleToggleCategoryModal = () => {
 		this.setState({
 			isAddModalOpen: !this.state.isAddModalOpen,
+
 		});
 	};
+	componentDidMount() {
+		const token = localStorage.getItem('token');
+		axios.get(`${config.URL}/admin/categories`, {
+			headers: {
+				'Authorization': token
+			}
+		})
+			.then((response) => {
+				this.setState({
+					data: response.data.data.category
+				})
+			});
+	}
 
 	render() {
+		const data = this.state.data
 		const { isAddModalOpen } = this.state;
 		return (
 			<Grid fluid>
@@ -40,30 +58,35 @@ class Category extends Component {
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-											<td>
-												<Image src={avatar} style={{ width: "50px" }} roundedCircle />
-											</td>
-											<td>Test Catgory</td>
-											<td>
-												<Dropdown>
-													<Dropdown.Toggle variant='success' id='dropdown-basic'></Dropdown.Toggle>
+										{data.map((category, i) => {
+											return (
+												<tr>
+													<td>{i+1}</td>
+													<td>
+														<Image src={avatar} style={{ width: "50px" }} roundedCircle />
+													</td>
+													<td>{category.name}</td>
+													<td>
+														<Dropdown>
+															<Dropdown.Toggle variant='success' id='dropdown-basic'></Dropdown.Toggle>
 
-													<Dropdown.Menu>
-														<li className='dropdown-item'>
-															<a href=''>View</a>
-														</li>
-														<li className='dropdown-item'>
-															<a href=''>Edit</a>
-														</li>
-														<li className='dropdown-item'>
-															<a href=''>Delete</a>
-														</li>
-													</Dropdown.Menu>
-												</Dropdown>
-											</td>
-										</tr>
+															<Dropdown.Menu>
+																<li className='dropdown-item'>
+																	<a href=''>View</a>
+																</li>
+																<li className='dropdown-item'>
+																	<a href=''>Edit</a>
+																</li>
+																<li className='dropdown-item'>
+																	<a href=''>Delete</a>
+																</li>
+															</Dropdown.Menu>
+														</Dropdown>
+													</td>
+												</tr>
+											)
+										})}
+
 									</tbody>
 								</Table>
 							}
