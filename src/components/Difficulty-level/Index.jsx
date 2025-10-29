@@ -20,7 +20,7 @@ class DifficultyLevel extends Component {
 			<Grid fluid>
 				<Row>
 					<Col md={12} style={{ margin: "10px 0 10px 0" }}>
-						<Button className='btn-primary pull-right m-2' onClick={this.handleToggleDifficultyLevelModal}>
+						<Button className='btn-dark pull-right m-2' onClick={this.handleToggleDifficultyLevelModal}>
 							Add Difficulty Level
 						</Button>
 					</Col>
