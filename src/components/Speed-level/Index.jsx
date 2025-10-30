@@ -208,7 +208,7 @@ class SpeedLevel extends Component {
                     <EditSpeedLevelModal
                         onClose={this.handleToggleEditSpeedLevelModal}
                         selection={this.state.selection}
-                        isEditModalOpen={isEditModalOpen}
+                        isEditModalOpen={this.state.isEditModalOpen}
                         handleEditSpeedLevel={this.handleEditSpeedLevel}
                         speedLevelNeedToBeEdit={speedLevelNeedToBeEdit}
                     />

@@ -8,7 +8,10 @@ import "./assets/css/animate.min.css";
 import "./assets/sass/light-bootstrap-dashboard-react.scss?v=1.3.0";
 import "./assets/css/demo.css";
 import "./assets/css/pe-icon-7-stroke.css";
+import "react-toastify/dist/ReactToastify.css";
 import "./assets/css/custom.css";
+import "./assets/css/custom2.css";
+import "./assets/css/media.css";
 
 import AdminLayout from "layouts/Admin.jsx";
 import LoginLayout from "layouts/Login";

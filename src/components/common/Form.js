@@ -39,7 +39,6 @@ class Form extends Component {
 	};
 
 	handleImageChange = (e) => {
-		console.log(e.target.files[0]);
 		if (
 			e.target.files[0].name
 				.split(".")
