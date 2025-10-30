@@ -27,6 +27,7 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
 import { style } from "variables/Variables.jsx";
 
 import routes from "routes.js";
+import { ToastContainer } from "react-toastify";
 import ProtectedRoute from "components/common/ProtectedRoute";
 
 import image from "assets/img/sidebar-3.jpg";
@@ -160,6 +161,7 @@ class Admin extends Component {
 		return (
 			<div className='wrapper'>
 				<NotificationSystem ref='notificationSystem' style={style} />
+				<ToastContainer autoClose={10000} />
 				<Sidebar {...this.props} routes={routes} image={this.state.image} color={this.state.color} hasImage={this.state.hasImage} />
 				<div id='main-panel' className='main-panel' ref='mainPanel'>
 					<AdminNavbar {...this.props} brandText={this.getBrandText(this.props.location.pathname)} />
