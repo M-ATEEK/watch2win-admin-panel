@@ -27,6 +27,7 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
 import { style } from "variables/Variables.jsx";
 
 import routes from "routes.js";
+import ProtectedRoute from "components/common/ProtectedRoute";
 
 import image from "assets/img/sidebar-3.jpg";
 
@@ -72,21 +73,22 @@ class Admin extends Component {
 			autoDismiss: 15,
 		});
 	};
-	getRoutes = (routes) => {
-		return routes.map((prop, key) => {
-			if (prop.layout === "/admin") {
-				return (
-					<Route
-						path={prop.layout + prop.path}
-						render={(props) => <prop.component {...props} handleClick={this.handleNotificationClick} />}
-						key={key}
-					/>
-				);
-			} else {
-				return null;
-			}
-		});
-	};
+    getRoutes = (routes) => {
+        return routes.map((prop, key) => {
+            if (prop.layout === "/admin") {
+                return (
+                    <ProtectedRoute
+                        path={prop.layout + prop.path}
+                        exact
+                        component={prop.component}
+                        key={key}
+                    />
+                );
+            } else {
+                return null;
+            }
+        });
+    };
 	getBrandText = (path) => {
 		for (let i = 0; i < routes.length; i++) {
 			if (this.props.location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
