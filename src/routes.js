@@ -5,6 +5,8 @@ import Athelete from "components/Athelete/Index";
 import DifficultyLevel from "components/Difficulty-level/Index";
 import SpeedLevel from "components/Speed-level/Index";
 import Drill from "components/Drills/Index";
+import Subscription from "components/Subscription/Index";
+import DrillVideo from "components/Drills-video/Index";
 
 const dashboardRoutes = [
 	{
@@ -13,6 +15,7 @@ const dashboardRoutes = [
 		icon: "pe-7s-graph",
 		component: Dashboard,
 		layout: "/admin",
+		isShow: true,
 	},
 	{
 		path: "/users",
@@ -20,6 +23,7 @@ const dashboardRoutes = [
 		icon: "pe-7s-user",
 		component: Users,
 		layout: "/admin",
+		isShow: true,
 	},
 	{
 		path: "/categories",
@@ -27,6 +31,7 @@ const dashboardRoutes = [
 		icon: "pe-7s-back-2",
 		component: Category,
 		layout: "/admin",
+		isShow: true,
 	},
 	{
 		path: "/atheletes",
@@ -34,6 +39,7 @@ const dashboardRoutes = [
 		icon: "pe-7s-add-user",
 		component: Athelete,
 		layout: "/admin",
+		isShow: true,
 	},
 	{
 		path: "/difficulty-levels",
@@ -41,6 +47,7 @@ const dashboardRoutes = [
 		icon: "pe-7s-edit",
 		component: DifficultyLevel,
 		layout: "/admin",
+		isShow: true,
 	},
 	{
 		path: "/speed-levels",
@@ -48,6 +55,7 @@ const dashboardRoutes = [
 		icon: "pe-7s-edit",
 		component: SpeedLevel,
 		layout: "/admin",
+		isShow: true,
 	},
 	{
 		path: "/drills",
@@ -55,6 +63,23 @@ const dashboardRoutes = [
 		icon: "pe-7s-albums",
 		component: Drill,
 		layout: "/admin",
+		isShow: true,
+	},
+	{
+		path: "/drills/videos/:id",
+		name: "Drills Videos",
+		icon: "pe-7s-albums",
+		component: DrillVideo,
+		layout: "/admin",
+		isShow: false,
+	},
+	{
+		path: "/subscriptions",
+		name: "Subscription",
+		icon: "pe-7s-cash",
+		component: Subscription,
+		layout: "/admin",
+		isShow: true,
 	},
 ];
 
