@@ -113,3 +113,110 @@ textarea {
 .speed-level-note {
 	margin: 6px 0 0 0;
 }
+
+/* login page custom style */
+body {
+	background: #f4f5f8;
+}
+.loginArea {
+	border-radius: 50px;
+	padding: 100px 0;
+	background: #fff;
+	margin: 30px 0;
+}
+
+.formArea h3 {
+	font-size: 60px;
+	font-weight: 700;
+	margin-bottom: 60px;
+}
+.formArea input {
+	border: 0;
+	border-bottom: #000 solid 1px;
+	font-size: 25px;
+	color: #979797;
+	border-radius: 0;
+	height: auto;
+}
+.input-group-text {
+	border-radius: 0;
+	background: none;
+	border: 0;
+	border-bottom: #000 solid 1px;
+}
+.formArea input:focus {
+	color: #495057;
+	background-color: #fff;
+	border: 0;
+	border-bottom: #000 solid 1px;
+	outline: 0;
+	box-shadow: none;
+}
+.formArea .form-group {
+	margin-bottom: 50px;
+}
+.btnSubmit {
+	background: #41bea0;
+	color: #fff;
+	width: 30%;
+	border: #41bea0 solid 1px;
+}
+.loginArea input[type="email"] {
+	background: url("../../assets/img/envelope.png") no-repeat;
+	padding-left: 40px;
+	background-position-y: 50%;
+}
+.loginArea input[type="password"] {
+	background: url("../../assets/img/lock.png") no-repeat;
+	padding-left: 40px;
+	background-position-y: 50%;
+}
+
+.adminPagination ul li {
+	margin: 0 10px;
+}
+.adminPagination ul li a {
+	padding: 5px 12px;
+	margin: 0 3px 0 3px;
+	border: 1px solid #8898aa;
+	border-radius: 50%;
+	color: #07b5b6;
+	width: 38px;
+	height: 38px;
+	font-size: 17px;
+	transition-duration: 0.3s;
+}
+.adminPagination ul li:last-child a {
+	border-top-right-radius: 50% !important;
+	border-bottom-right-radius: 50% !important;
+}
+.adminPagination ul li:first-child a {
+	border-top-left-radius: 50% !important;
+	border-bottom-left-radius: 50% !important;
+}
+.adminPagination ul li a:hover {
+	background: #07b5b6;
+	color: #fff;
+	transition-duration: 0.3s;
+}
+
+.search-btn {
+	border: none;
+	background-color: none;
+}
+
+.search-btn > i {
+	font-size: 26px;
+}
+
+/* Toastify Css */
+.Toastify__toast--success {
+	background-color: #5cb85c;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.Toastify__toast--danger {
+	background-color: #d9534f;
+	border-radius: 5px;
+	font-weight: bold;
+}
