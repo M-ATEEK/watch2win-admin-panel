@@ -47,7 +47,7 @@ class AtheleteModal extends Form {
                                 name: response.data.data.athlete.name,
                                 image: response.data.data.athlete.image,
                             },
-                            imagePreview: `http://localhost:8000/image/${response.data.data.athlete.image}`,
+                            imagePreview: `${config.IMG_URL}/image/${response.data.data.athlete.image}`,
                         });
                     } else {
                         this.setState({

@@ -172,7 +172,7 @@ class Users extends Component {
 														{user.image === undefined ? (
 															<Image src={avatar} style={{ width: "50px",borderRadius:"50%" }} roundedCircle />
 														) : (
-															<Image src={`http://localhost:8000/image/${user.image}`} style={{ width: "50px",borderRadius:"50%" }} roundedCircle />
+															<Image src={`${config.IMG_URL}/image/${user.image}`} style={{ width: "50px",borderRadius:"50%" }} roundedCircle />
 														)}
 													</td>
 													<td>

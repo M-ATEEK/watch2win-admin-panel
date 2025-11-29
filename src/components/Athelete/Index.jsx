@@ -171,7 +171,7 @@ class Athelete extends Component {
 															<Image src={avatar} style={{ width: "50px",borderRadius:"50%" }} roundedCircle />
 														) : (
 															<Image
-																src={`http://localhost:8000/image/${athelete.image}`}
+																src={`${config.IMG_URL}/image/${athelete.image}`}
 																style={{ width: "50px",borderRadius:"50%" }}
 																roundedCircle
 															/>

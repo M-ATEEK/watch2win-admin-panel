@@ -202,7 +202,7 @@ class UserModal extends Form {
 							userName: response.data.data.user.userName,
 							roles: ["user"],
 						},
-						imagePreview: `http://localhost:8000/image/${response.data.data.user.image}`,
+						imagePreview: `${config.IMG_URL}/image/${response.data.data.user.image}`,
 					});
 				} else {
 					this.setState({

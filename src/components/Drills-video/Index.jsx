@@ -143,14 +143,14 @@ class DrillVideo extends Component {
 															<td>{video.speedLevel.name}</td>
 															<td>
 																<img
-																	src={`http://localhost:8000/image/drills/${video.thumbnail}`}
+																	src={`${config.IMG_URL}/image/drills/${video.thumbnail}`}
 																	width='150px'
 																	heigth='150px'
 																/>
 															</td>
 															<td>
 																<ReactPlayer
-																	url={`http://localhost:8000/image/drills/${video.video}`}
+																	url={`${config.IMG_URL}/image/drills/${video.video}`}
 																	controls={true}
 																	width='150px'
 																	height='100px'

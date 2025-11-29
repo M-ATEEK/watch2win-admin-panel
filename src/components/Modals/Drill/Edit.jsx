@@ -181,7 +181,7 @@ class EditDrillModal extends Form {
 											<div className='col-md-12'>
 												<div className='form-group text-center'>
 													<img
-														src={thumbnailPreview || `http://localhost:8000/image/drills/${data.thumbnail}`}
+														src={thumbnailPreview || `${config.IMG_URL}/image/drills/${data.thumbnail}`}
 														alt=''
 														width='100%'
 														height='120px'
@@ -304,7 +304,7 @@ class EditDrillModal extends Form {
 											<div className='col-md-12'>
 												<div className='form-group text-center'>
 													<img
-														src={thumbnailPreview || `http://localhost:8000/image/drills/${data.thumbnail}`}
+														src={thumbnailPreview || `${config.IMG_URL}/image/drills/${data.thumbnail}`}
 														alt=''
 														width='100%'
 														height='120px'

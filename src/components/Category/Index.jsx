@@ -168,7 +168,7 @@ class Category extends Component {
 															<Image src={avatar} style={{ width: "50px",borderRadius:"50%" }} roundedCircle />
 														) : (
 															<Image
-																src={`http://localhost:8000/image/${category.image}`}
+																src={`${config.IMG_URL}/image/${category.image}`}
 																style={{ width: "50px",borderRadius:"50%" }}
 																roundedCircle
 															/>

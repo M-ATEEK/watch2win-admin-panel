@@ -172,7 +172,7 @@ class Drill extends Component {
 													<td>{drills.difficultyLevel.name}</td>
 													<td>{drills.videos.length}</td>
 													<td>
-													<Link to={`drills/videos/${drills._id}`}><img src={`http://localhost:8000/image/drills/${drills.thumbnail}`} width='150px' heigth='150px' /></Link>
+													<Link to={`drills/videos/${drills._id}`}><img src={`${config.IMG_URL}/image/drills/${drills.thumbnail}`} width='150px' heigth='150px' /></Link>
 													</td>
 													<td>
 														<Dropdown>

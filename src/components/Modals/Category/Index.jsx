@@ -52,7 +52,7 @@ class CategoryModal extends Form {
                                 name: response.data.data.category.name,
                                 image: response.data.data.category.image,
                             },
-                            imagePreview: `http://localhost:8000/image/${response.data.data.category.image}`,
+                            imagePreview: `${config.IMG_URL}/image/${response.data.data.category.image}`,
                         });
                     } else {
                         this.setState({
