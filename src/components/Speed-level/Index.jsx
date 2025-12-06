@@ -17,7 +17,7 @@ class SpeedLevel extends Component {
         speedLevels: [],
         speedLevelNeedToBeEdit: "",
         showSearch: false,
-        showSearchButton: true,
+        showSearchButton: false,
         selection: ""
     };
 
@@ -109,7 +109,7 @@ class SpeedLevel extends Component {
     };
     handleSearch = (e) => {
         let search = e.currentTarget.value;
-        Axios.get(`${config.API_URL}/admin/difficulty/?search=${search}`, {
+        Axios.get(`${config.API_URL}/admin/speed/?search=${search}`, {
             headers: {
                 Authorization: Auth.getToken(),
             },
@@ -158,7 +158,7 @@ class SpeedLevel extends Component {
             <Grid fluid>
                 <Row style={{ margin: "10px 0 10px 0" }}>
                     <Col md={8}>
-                        <input  onClick={this.toggleSearch} className='search-bar' placeholder='Search...' style={{ display: showSearchClass }} onChange={this.handleSearch} />
+                        <input className='search-bar' placeholder='Search...' style={{ display: showSearchClass }} onChange={this.handleSearch} />
                     </Col>
 
                     <Col md={2} style={{ padding: 0 }}>

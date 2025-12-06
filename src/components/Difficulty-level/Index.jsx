@@ -19,7 +19,7 @@ class DifficultyLevel extends Component {
         difficulties: [],
         difficultyNeedToBeEdit: "",
         showSearch: false,
-        showSearchButton: true,
+        showSearchButton: false,
         activePage: 1,
         totalItems: "",
         selection: ""
@@ -179,7 +179,7 @@ class DifficultyLevel extends Component {
             <Grid fluid>
                 <Row style={{margin: "10px 0 10px 0" }}>
                     <Col md={8}>
-                        <input  onClick={this.toggleSearch} className='search-bar' placeholder='Search...' style={{ display: showSearchClass }} onChange={this.handleSearch} />
+                        <input className='search-bar' placeholder='Search...' style={{ display: showSearchClass }} onChange={this.handleSearch} />
                     </Col>
 
                     <Col md={2} style={{ padding: "0" }}>

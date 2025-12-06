@@ -22,7 +22,7 @@ class Athelete extends Component {
 		activePage: 1,
 		totalItems: "",
 		showSearch: false,
-		showSearchButton: true,
+		showSearchButton: false,
 	};
 
 	handlePageChange = (pageNumber) => {
@@ -133,7 +133,7 @@ class Athelete extends Component {
 			<Grid fluid>
 				<Row style={{ margin: "10px 0 10px 0" }}>
 					<Col md={8}>
-						<input  onClick={this.toggleSearch} className='search-bar' placeholder='Search...' style={{ display: showSearchClass }} onChange={this.handleSearch} />
+						<input className='search-bar' placeholder='Search...' style={{ display: showSearchClass }} onChange={this.handleSearch} />
 					</Col>
 
 					<Col md={2}>
